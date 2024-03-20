@@ -1,0 +1,23 @@
+<div class="border-bottom row" style="margin-bottom:16px;padding-bottom: 4px;">
+    <div class="col-9">
+          <img src="{{url_for('static', filename=rec['image'])}}" alt="{{rec['title']}}" width="150" height="150">
+          <h4 style=" color:rgb(15, 15, 15); margin-bottom:4px;">
+              {{rec['title']}}
+            </h4>
+        <div>
+          <b>Cuisine:</b> {{rec['cuisine']}}
+        </div>
+        {% if 'calories' in recipe %}
+          <div>
+            <b>Calories:</b> {{rec['calories']}}
+          </div>
+        {% endif %}
+  </div>
+  <div class="col-3">
+    <button type="button" class="btn btn-outline-primary">View</button>
+  </div>
+</div>
+
+
+# {% include 'toppics.html' %}
+# the above code is with the column divided version of item and menu.
