@@ -1,5 +1,5 @@
 # import flask module
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
  
 # instance of flask application
 app = Flask(__name__)
@@ -33,6 +33,10 @@ RECIPE = [
 @app.route("/")
 def hello_world():
     return render_template('home.html', recipe=RECIPE)
+
+@app.route("/api/recipe")
+def list_recipe():
+    return jsonify(RECIPE)
  
 if __name__ == '__main__':  
    app.run()

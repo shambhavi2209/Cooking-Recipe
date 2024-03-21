@@ -92,21 +92,7 @@
         <h2>Top Pics</h2>
         <div>
           {% for rec in recipe %}
-          <div class="border-bottom" style="margin-bottom:16px;padding-bottom: 4px;">
-                  <img src="{{url_for('static', filename=rec['image'])}}" alt="{{rec['title']}}" width="150" height="150">
-                  <h4 style=" color:rgb(15, 15, 15); margin-bottom:4px;">
-                      {{rec['title']}}
-                    </h4>
-                <div>
-                  <b>Cuisine:</b> {{rec['cuisine']}}
-                </div>
-                {% if 'calories' in rec %}
-                  <div>
-                    <b>Calories:</b> {{rec['calories']}}
-                  </div>
-                {% endif %}
-            <button type="button" class="btn btn-outline-primary">View</button>
-        </div>
+            {% include 'topItem.html' %}
           {% endfor %}
         </div>
         <div class="text-center">
