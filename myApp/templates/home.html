@@ -14,7 +14,7 @@
   <body style="background-color: ivory">
       <div class="mx-auto p-4">
         {% include 'nav.html' %}
-        <h1 class="text-center">Culinary Crafts</h1>
+        <h1 class="text-center mt-3 mb-5">Culinary Crafts</h1>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -78,17 +78,25 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <h2 class="text-center">About Our Journey</h2>
+        <h2 class="text-center mt-5">About Our Journey</h2>
         <p class="text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
           consectetur hic harum eius earum dicta sint modi voluptate
           reprehenderit et cumque obcaecati animi dignissimos, aut ex molestiae
-          rem fugiat nostrum!
+          rem fugiat nostrum! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Dicta voluptates impedit ullam assumenda amet quas quisquam temporibus natus ratione 
+          eum modi placeat deleniti cumque consequatur dolorum, tempora libero est et.
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis sint recusandae numquam ducimus quis culpa,
+          veniam explicabo neque aliquid ipsam ullam fugit quae atque quasi odit dignissimos sunt, facere minus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vel inventore, nostrum ea, laborum modi accusamus labore laudantium possimus aspernatur sit.
+          Esse sed distinctio perferendis ab, odio iusto explicabo sint.
         </p>
-        <h2>Top Pics</h2>
-        <div>
-          {% for rec in recipe %}
+        <h2 class="text-center mt-5">Top Pics</h2>
+        <div class="row">
+          {% for rec in recipe %}    
+          <div class="col-md-4 mb-4">   
             {% include 'topItem.html' %}
+          </div>
           {% endfor %}
         </div>
         <div class="text-center">
@@ -98,5 +106,5 @@
       </div>
       {% include 'footer.html' %}
         </div>
-  </body>
+        </body>
 </html>
